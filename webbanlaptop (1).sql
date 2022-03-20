@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2022 at 09:30 AM
+-- Generation Time: Mar 20, 2022 at 03:51 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -87,6 +87,29 @@ INSERT INTO `colors` (`id`, `id_product`, `name`, `code`, `img`) VALUES
 (23, 23, 'Đen', '#000000', 'b.jpg'),
 (24, 24, 'Đen', '#000000', 'b.jpg'),
 (25, 25, 'Đen', '#000000', 'b.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menus`
+--
+
+CREATE TABLE `menus` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `url` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `menus`
+--
+
+INSERT INTO `menus` (`id`, `name`, `url`) VALUES
+(1, 'Trang chủ', NULL),
+(2, 'Sản phẩm', NULL),
+(3, 'Giỏ hàng', NULL),
+(4, 'Bài viết', NULL),
+(5, 'Liên hệ', NULL);
 
 -- --------------------------------------------------------
 
@@ -180,6 +203,12 @@ ALTER TABLE `colors`
   ADD KEY `id_product` (`id_product`);
 
 --
+-- Indexes for table `menus`
+--
+ALTER TABLE `menus`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -202,6 +231,12 @@ ALTER TABLE `slides`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `menus`
+--
+ALTER TABLE `menus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `products`
