@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ProductController extends BaseController{
 	@RequestMapping(value = {"//{id}"})
 	public ModelAndView Index(@PathVariable long id) {
-		mvshare.setViewName("user/products/product");
+		mvshare.setViewName("user/product/product");
 		return mvshare;
 	}
 
